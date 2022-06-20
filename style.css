@@ -244,13 +244,18 @@ nav .logo {
   color: #fff;
  }
 
- .fa-car, .fa-arrow-left, .fa-arrow-right, .fa-city {
+ .fa-car, .fa-city {
     color: #000;
+}
+
+.fa-arrow-left, .fa-arrow-right{
+	
+	color:#f4c20d ;
 }
 
 .fa-map-marker-alt{
 
-color:#0A3161
+color:#3cba54;
 }
 
 
