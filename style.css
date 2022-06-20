@@ -32,7 +32,7 @@ h1{
 
 ul{
 	list-style: none;
-    padding: 150px 0 0 0;
+    padding: 60px 0 0 0;
 }
 
 li{
@@ -84,8 +84,10 @@ nav .links a{
 .accordion_item h1 {
     font-size: 16px;
     background-color: #4a5461;
+    border: 1px solid #4a5461;
+    border-radius: 10px;
     padding: 20px 0px;
-    margin: 5px 50px;
+    margin: 5px;
     color: #fff;
     text-align: center;
     cursor: pointer;
@@ -246,6 +248,11 @@ nav .logo {
     color: #000;
 }
 
+.fa-map-marker-alt{
+
+color:#0A3161
+}
+
 
 
 .side{
@@ -254,7 +261,7 @@ nav .logo {
 	position: absolute;
 	right:0;
 	top:0;
-	background-color:#000;
+	background-color:#212121;
 	opacity: 1;
 	transition: height 0.5s;
 	width:100%;
@@ -270,7 +277,7 @@ nav .logo {
     text-align: center;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
-    margin-top:100px;
+    margin-top: 40px;
     font-size: 18px;
 }
 
@@ -443,7 +450,7 @@ p.result {
 .map_switch {
     background-color: #212121;
     color: #fff;
-    padding:20px 0;
+    padding:10px 0;
     text-align: center;
     cursor: pointer;
 }
