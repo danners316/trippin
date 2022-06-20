@@ -9,7 +9,7 @@ $('.hamburger_hit').on('click', function(){
 if ($(".fa-bars")[0]){
   
   
-  $('.side').css("height","430px");
+  $('.side').css("height","100%");
   $('.map_switch').slideUp();
   
   $('.hamburger_hit').removeClass('fa-bars').addClass('fa-times');
