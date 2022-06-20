@@ -2,7 +2,20 @@
 
 // Hamburger Functions
 
-//localStorage.clear();
+
+$('.reset').on('click', function(){
+
+  let text = "You're About To Wipe All Data\nProceed?";
+
+  if (confirm(text)) {
+    localStorage.clear();
+  } else {
+    
+  }
+
+    
+
+});
 
 $('.hamburger_hit').on('click', function(){
 
@@ -81,7 +94,7 @@ $('.map_switch .fas').removeClass('fa-angle-down').addClass('fa-angle-up');
 
 else
 {
-$('.map iframe').css("height","650px");
+$('.map iframe').css("height","630px");
 $('.map_switch .fas').removeClass('fa-angle-up').addClass('fa-angle-down');
 
 }

@@ -364,6 +364,10 @@ ol#receipts li {
     list-style: none;
 }
 
+li.bigger a {
+    font-size: 20px;
+}
+
 ol#receipts li.receipts_date {
     color: #B31942;
 }
