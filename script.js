@@ -10,6 +10,7 @@ if ($(".fa-bars")[0]){
   
   
   $('.side').css("height","430px");
+  $('.map_switch').slideUp();
   
   $('.hamburger_hit').removeClass('fa-bars').addClass('fa-times');
   //$('.fa-times').css("color","#fff");
@@ -24,6 +25,7 @@ setTimeout(function(){
 } else {
     
 $('.hamburger_menu ul').fadeOut();
+$('.map_switch').slideDown();
 
 
 setTimeout(function(){ 
