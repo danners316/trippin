@@ -278,6 +278,8 @@ color:#0A3161
     text-align: center;
     margin-top: 15px;
     font-size: 18px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
 .side ul{}
@@ -441,7 +443,7 @@ p.result {
 .map iframe {
     margin: 0 auto;
     display: block;
-    height: 710px;
+    height: 80%;
     width: 100%;
     transition: height, .75s;
 }
