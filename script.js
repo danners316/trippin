@@ -81,7 +81,7 @@ $('.map_switch .fas').removeClass('fa-angle-down').addClass('fa-angle-up');
 
 else
 {
-$('.map iframe').css("height","80%");
+$('.map iframe').css("height","650px");
 $('.map_switch .fas').removeClass('fa-angle-up').addClass('fa-angle-down');
 
 }

@@ -442,7 +442,7 @@ p.result {
 .map iframe {
     margin: 0 auto;
     display: block;
-    height: 80%;
+    height: 650px;
     width: 100%;
     transition: height, .75s;
 }
