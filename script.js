@@ -2,7 +2,7 @@
 
 // Hamburger Functions
 
-
+//localStorage.clear();
 
 $('.hamburger_hit').on('click', function(){
 
@@ -124,6 +124,8 @@ var savedList = localStorage.getItem('receiptListItems');
 
 function updateCount(){
 
+  if (localStorage.current_amount ) {
+
     if (localStorage.current_amount < 0 ){
     document.querySelector(".result").innerHTML = "Simon Owes Dan " + Math.abs(localStorage.current_amount) + " $";
     } 
@@ -131,6 +133,12 @@ function updateCount(){
     { 
     document.querySelector(".result").innerHTML = "Dan Owes Simon " + Math.abs(localStorage.current_amount) + " $"; 
     } 
+
+    }
+
+    else{
+    document.querySelector(".result").innerHTML = "No Payments Made Yet";  
+    }
 
 }
 
@@ -152,8 +160,10 @@ var who = this.className.split(" ").pop();
 var today = new Date();
 var when = ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
 
-var receiptListItem = (who + " paid $" + amountinput + " on " + descriptioninput + " at " + whereinput + " - " + when);
+var receiptListItem = (who + " paid $" + amountinput + " on " + descriptioninput + " at " + whereinput);
+receipts.innerHTML += '<li class="receipts_date">'  + when + '</li>';
 receipts.innerHTML += '<li>'  + receiptListItem + '</li>';
+
 // Save the list to localStorage
 localStorage.setItem('receiptListItems', receipts.innerHTML);
 // Check for saved wishlist items
@@ -186,7 +196,7 @@ else{
     } 
 
     else {
-      localStorage.current_amount = 1;
+      localStorage.current_amount = amountinput;
     }
 
     updateCount();  
@@ -198,3 +208,5 @@ else{
   }    
 
 };
+
+

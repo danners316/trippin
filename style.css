@@ -361,6 +361,11 @@ ol#receipts li {
     text-align: left;
     line-height: 0px;
     margin-left: 25px;
+    list-style: none;
+}
+
+ol#receipts li.receipts_date {
+    color: #B31942;
 }
 
 p.result {
