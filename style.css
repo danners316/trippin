@@ -275,9 +275,7 @@ color:#0A3161
     color: #B31942;
     padding: 20px 12px;
     text-align: center;
-    border-top: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-    margin-top: 40px;
+    margin-top: 15px;
     font-size: 18px;
 }
 
@@ -368,11 +366,11 @@ p.result {
     margin: 0 auto;
     text-align: center;
     position: relative;
-    top: 50px;
+    top: 25px;
 }
 
 .black_box {
-    margin: 50px 0;
+    margin: 10px 0;
 }
 
 #expense{
