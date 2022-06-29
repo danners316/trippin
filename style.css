@@ -2,6 +2,11 @@
 
 /* fontface */
 
+body {
+    background-image: url(images/backgroundNYC.jpg);
+    background-repeat: no-repeat;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -73,7 +78,7 @@ nav .links a{
 .accordion_item img {
     display: block;
     width: 100px;
-    margin: 30px auto;
+    padding: 20px 50px;
     cursor: pointer;
 }
 
@@ -83,21 +88,32 @@ nav .links a{
 
 .accordion_item h1 {
     font-size: 16px;
-    background-color: #4a5461;
-    border: 1px solid #4a5461;
-    border-radius: 10px;
+    background-color: #fff;
     padding: 20px 0px;
-    margin: 5px;
-    color: #fff;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    color: #4a5461;
+    opacity: 0.8;
     text-align: center;
     cursor: pointer;
     letter-spacing: 2px;
+    letter-spacing: 2px;
+    text-align: right;
+    padding-right: 20%;
 }
+
+.accordion_item h1::before {
+      font-family: "Font Awesome 5 Free"; 
+      font-weight: 900; 
+      content: "\f133";
+      position:absolute;
+      left:20%;
+  }
 
 .accordion_item li i {
     position: relative;
     bottom: 13px;
-    z-index: -1;
+    z-index: 0;
 }
 
 .accordion_item li i.fa-2x {
@@ -106,19 +122,26 @@ nav .links a{
 
 .accordion_item li {
     color: #000;
-    width: 50%;
     float: left;
     margin-bottom: 0px;
     cursor: text;
 }
 
+.accordion_item li:nth-child(1) {
+    width: 15%;
+    padding-left: 35px;
+    padding-right: 15px;
+}
+
 .accordion_item.last {
-    border-bottom: 1px solid #C3C3C3;
+    margin-bottom: 60px;
 }
 
 .accordion_content{
 	display: none;
-	margin-bottom: 50px;
+	padding-bottom: 50px;
+  background-color: #fff;
+  opacity: 0.8;
 }
 
 
@@ -230,6 +253,18 @@ nav .logo {
 	top:20px;
 	z-index: 99;
 } 
+
+.button_2{
+  display: none;
+}
+
+.button_2 .fa-times {
+    color: #000;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+}
 
 .fa-bars, .fa-times{
   color: #000;
@@ -389,8 +424,15 @@ p.result {
     margin: 10px 0;
 }
 
-#expense{
-	min-height:1000px;
+#expense {
+    position: absolute;
+    top: 0;
+    background-color: #fff;
+    margin: 0;
+    padding-top: 50px;
+    height: 100%;
+    left: 100%;
+    transition: left, 0.5s;
 }
 
 #expense h1 {
@@ -445,6 +487,7 @@ p.result {
   position: fixed;
   width: 100%;
   bottom: 0;
+  z-index:1;
   /*
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -456,7 +499,7 @@ p.result {
 .map iframe {
     margin: 0 auto;
     display: block;
-    height: 650px;
+    height: 0;
     width: 100%;
     transition: height, .75s;
 }

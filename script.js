@@ -79,6 +79,38 @@ content.addClass('open_accordion_item');
 
 };
 
+$('.expense_show').click(function(){
+
+
+$('.side').css("height","0");
+
+setTimeout(function(){ 
+
+  
+    $('#expense').css("left","0");
+    $('.button_2').show();
+
+}, 250);
+
+});
+
+$('.button_2').click(function(){
+
+$('.button_2').hide();
+$('#expense').css("left","100%");
+
+setTimeout(function(){ 
+
+    
+
+}, 250);
+
+
+
+
+
+});
+
 
 
 $('.map_switch').click(function(){
@@ -175,6 +207,7 @@ var when = ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate
 
 var receiptListItem = (who + " paid $" + amountinput + " on " + descriptioninput + " at " + whereinput);
 receipts.innerHTML += '<li class="receipts_date">'  + when + '</li>';
+receipts.innerHTML += '<li>'  + receiptListItem + '</li>';
 receipts.innerHTML += '<li>'  + receiptListItem + '</li>';
 
 // Save the list to localStorage

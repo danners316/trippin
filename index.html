@@ -20,8 +20,8 @@
 	</nav>
 
 	<div id="map" class="map">
-	<div class="map_switch"><i class="fas fa-angle-down fa-3x"></i></div>
-	<iframe src="https://www.google.com/maps/d/embed?mid=1UffEcwwsjudiYFH-rORzN8CuSTn06mip&ehbc=2E312F" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+	<div class="map_switch"><i class="fas fa-angle-up fa-3x"></i></div>
+	<iframe src="https://www.google.com/maps/d/embed?mid=1UffEcwwsjudiYFH-rORzN8CuSTn06mip&ll=40.73051044235558%2C-73.97590444970703&z=13" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
 	</div>
 
@@ -29,12 +29,16 @@
 		<i class="fas hamburger_hit fa-bars fa-3x"></i>
 	</div>
 
+	<div class="button_2">
+		<i class="fas hamburger_hit fa-times fa-3x" aria-hidden="true"></i>
+	</div>
+
 	<!-- <div class="masthead slideshow"> -->	
 	
 
 	<div class="side">
 		<ul>
-			<li><a href="#expense">Where Them Bills at</a></li>
+			<li><a class="expense_show">Where Them Bills at</a></li>
 		</ul>
 
 		<h1>Submit An Expense</h1>
@@ -60,6 +64,7 @@
 		<h1>30th Sunday</h1>
 
 		<div class="accordion_content open_accordion_item">
+		
 		<img class="" src="images/airbnb_logo.png">
 		<ul>
 			<li><i class="fas fa-solid fa-car fa-3x"></i></li>
@@ -245,9 +250,11 @@
 
 		<h1>Receipts</h1>
        	<ol id="receipts" style="color:#fff"></ol>
+       	<!--
        	<ul>
        		<li><a class="reset" href="#">Reset the Pay</a></li>
        	</ul>
+       -->
 
 		</div><!-- Closes section -->
 
