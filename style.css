@@ -513,9 +513,6 @@ p.result {
     padding:10px 0;
     text-align: center;
     cursor: pointer;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 /*
 .map_switch:before {
@@ -549,7 +546,15 @@ td {
 
 .calendar_item p{display:none;}
 
-/* TABLE */
+/* MAP OVERIDES */
+
+.i4ewOd-pzNkMb-tJHJj {
+    background-color: #212121;
+}
+
+.SfQLQb-dIxMhd-bN97Pc-b3rLgd.SfQLQb-QClCJf-giiMnc .i4ewOd-pzNkMb-tJHJj {
+    background-color: #212121;
+}
 
 
 
