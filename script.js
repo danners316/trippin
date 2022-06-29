@@ -83,10 +83,11 @@ $('.expense_show').click(function(){
 
 
 $('.side').css("height","0");
+$('#expense').show();
 
 setTimeout(function(){ 
 
-  
+    
     $('#expense').css("left","0");
     $('.button_2').show();
 
@@ -99,9 +100,10 @@ $('.button_2').click(function(){
 $('.button_2').hide();
 $('#expense').css("left","100%");
 
+
 setTimeout(function(){ 
 
-    
+$('#expense').hide();   
 
 }, 250);
 

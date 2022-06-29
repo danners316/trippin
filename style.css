@@ -434,6 +434,8 @@ p.result {
     left: 100%;
     transition: left, 0.5s;
     overflow: hidden;
+    display: none;
+
 }
 
 #expense h1 {
