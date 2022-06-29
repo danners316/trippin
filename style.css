@@ -433,6 +433,7 @@ p.result {
     height: 100%;
     left: 100%;
     transition: left, 0.5s;
+    overflow: hidden;
 }
 
 #expense h1 {
