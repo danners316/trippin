@@ -86,6 +86,10 @@ nav .links a{
     padding: 30px 0;
 }
 
+ul.four li {
+    width: 18%;
+}
+
 .accordion_item h1 {
     font-size: 16px;
     background-color: #fff;
@@ -293,6 +297,9 @@ nav .logo {
 color:#3cba54;
 }
 
+.fa-phone{
+color:#db3236
+}
 
 
 .side{
