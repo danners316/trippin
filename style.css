@@ -15,10 +15,9 @@ html {
   font-family: Wiltona Brush;
   src: url(fonts/WiltonaBrush.ttf);
 }
-
-.wiltona{
-	font-family: Wiltona Brush;
-	font-size:32px;
+@font-face {
+  font-family: Coolvetica;
+  src: url(fonts/coolvetica.otf);
 }
 
 /* fontface */
@@ -66,6 +65,7 @@ nav{
 	z-index: 1;
 	font-family: 'Wiltona Brush';
 	font-size: 60px;
+  display: none;
 }
 
 
@@ -88,6 +88,14 @@ nav .links a{
 
 ul.four li {
     width: 18%;
+}
+
+ul.three li {
+    width: 28%;
+}
+
+ul.three li.icon {
+    width: 12%;
 }
 
 .accordion_item h1 {
@@ -134,7 +142,6 @@ ul.four li {
 .accordion_item li:nth-child(1) {
     width: 15%;
     padding-left: 35px;
-    padding-right: 15px;
 }
 
 .accordion_item.last {
@@ -158,7 +165,7 @@ ul.four li {
 
 	max-width: 1280px;
 	display: block;
-	margin:50px auto 0 auto;
+	margin:160px auto 0 auto;
 
 }
 
@@ -283,7 +290,7 @@ nav .logo {
   color: #fff;
  }
 
- .fa-car, .fa-city {
+ .fa-car, .fa-city, .fa-house-chimney {
     color: #000;
 }
 
@@ -297,7 +304,7 @@ nav .logo {
 color:#3cba54;
 }
 
-.fa-phone{
+.fa-mobile{
 color:#db3236
 }
 
@@ -316,6 +323,7 @@ color:#db3236
     z-index: 98;
     border: 1px solid #fff;
 
+
 }
 
 .side h1 {
@@ -326,6 +334,12 @@ color:#db3236
     font-size: 18px;
     border-top: 2px solid #fff;
     border-bottom: 2px solid #fff;
+    font-family: Coolvetica;
+    letter-spacing: 0.1em;
+}
+
+.reveal_content{
+
 }
 
 .side ul{}
@@ -336,12 +350,14 @@ label {
     display: block;
     color: #fff;
     text-align: center;
+
 }
 
 form, form input[type=text], form input[type=number]{
   width:450px;
   display: block;
   margin: 20px auto;
+  font-family: Lemonmilk;
 
 }
 
@@ -536,22 +552,170 @@ p.result {
 
 /* TABLE */
 
-table{
-	width:100%;
+
+table.calendar{
+	width:90%;
+  margin:0 auto;
 }
 
-td {
-    padding: 10px;
-    width:33%;
-    height:118px;
+.calendar td {
+    padding: 18px;
     background-color: #212121;
     color: #fff;
     text-align: center;
     cursor:pointer;
-    transition: height 1s, width 0.5s;
+    transition: height 1s;
+    font-size: 16px;
+    font-family: Coolvetica;
+    letter-spacing: 0.1em;
+    border: 1px solid #212121;
+    border-radius: 20px;
+    
+    
+}
+
+td.empty {
+    background-color: transparent;
+    padding: 4px 0;
+    border: none;
+}
+
+td.inactive{
+  color:grey;
+  cursor: text;
+
+}
+
+td.inactive, td.active{
+
+    
+  }
+
+.month, .day{
+  cursor: text;
+  opacity: 0.9;
+}
+
+.month{
+  margin:10px 0;
+}
+
+.reveal {
+    opacity: 0.9;
+    transition: height 0.5s;
+    width:93%;
+    margin:0 auto;
+    margin-top: 25px;
+    background: #ffffff;
+    font-family: Coolvetica;
+    overflow: hidden;
+    letter-spacing: 0.1em;
+}
+
+header {
+    margin: 0.5em auto;
+    height: 2.6em;
+    overflow: hidden;
+    width: 100%;
+    font-family: Coolvetica;
+    letter-spacing: 0.1em;
+}
+  
+  ul.spinner,
+  ul.spinner li {
+    height: 13.5em;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  
+  ul.spinner li {
+    list-style-type: none;
+    margin: 10px 0 2px 0;
+    height: 1em !important;
+    padding: 0px 0 0px 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    width: 100%;
+    color: #212121;
+  }
+
+  .calendar td.current_day{
+    background-color: #fff;
+    color: #212121;
+    transition: color, 1s;
+  }
+
+  
+  .spinner {
+    animation-name: titleflip;
+    animation: titleflip 5s ease-in-out 1;
+    }
+
+    .spinner.off {
+    animation-name: none; 
+    }
+  
+  @-webkit-keyframes titleflip {
+    0%, 20% {
+    transform: translate(0px, -12.50em);
+    }
+    20%,
+    100% {
+    transform: translate(0px, -0.315em);
+    }
+  }
+
+table.itinerary {
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.itinerary_item {
+    background-color: #fff;
+    min-height: 70px;
+    width: 93%;
+    margin: 0 auto;
+    opacity: 0.9;
+    margin-top: 2px;
+    display: flex;
+}
+
+.itinerary_item p {
+    width: 50%;
+    float: left;
+    padding-top: 9%;
+    font-family: Coolvetica;
+    letter-spacing: 0.1em;
+    font-size: 23px;
+}
+
+.itinerary_item ul {
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.itinerary_item li {
+    display: inline;
+    padding: 0 10px;
+}
+
+.itinerary td{
+  padding: 10px;
+}
+
+.itinerary tr{
+  margin-bottom: 20px;
+}
+
+td.active{
 }
 
 .calendar_item p{display:none;}
+
 
 /* MAP OVERIDES */
 

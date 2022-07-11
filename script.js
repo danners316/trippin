@@ -1,8 +1,27 @@
 // Script Here
 
+$('.active').on("click", function(){
+
+  $('.calendar td.active').removeClass("current_day");
+  $(this).addClass('current_day');
+  var day = $(this).attr("id");
+
+  //$(".reveal").css("height","200px");
+
+  $(".spinner").removeClass("off");
+  $("ul.spinner li.what_day").text(day);
+
+  setTimeout(function(){ 
+
+  $(".spinner").addClass("off");
+
+}, 1000);  
+
+});
+
 // Hamburger Functions
 
-
+//localStorage.clear();
 $('.reset').on('click', function(){
 
   let text = "You're About To Wipe All Data\nProceed?";
@@ -209,7 +228,6 @@ var when = ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate
 
 var receiptListItem = (who + " paid $" + amountinput + " on " + descriptioninput + " at " + whereinput);
 receipts.innerHTML += '<li class="receipts_date">'  + when + '</li>';
-receipts.innerHTML += '<li>'  + receiptListItem + '</li>';
 receipts.innerHTML += '<li>'  + receiptListItem + '</li>';
 
 // Save the list to localStorage
