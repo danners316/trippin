@@ -2,9 +2,43 @@
 
 $('.active').on("click", function(){
 
+
+
   $('.calendar td.active').removeClass("current_day");
-  $(this).addClass('current_day');
+  $(this).addClass('current_day');  
   var day = $(this).attr("id");
+
+  
+
+  var calendar_match = $(this).text();
+
+  if($("." + calendar_match).find("li.house a").attr("href") == "www"){ 
+
+   $('.itinerary_item.airbnb_links').css("top","400px");
+   $('.itinerary_item.airbnb_links ul').fadeOut();
+   $('.itinerary_item.staying_with').css("top","-70px");
+   $('.itinerary_item.staying_with ul').fadeIn();
+
+
+   }
+
+   else{
+
+    $('.itinerary_item.airbnb_links').css("top","0");
+    $('.itinerary_item.airbnb_links ul').fadeIn();
+    $('.itinerary_item.staying_with').css("top","400px");
+   $('.itinerary_item.staying_with ul').fadeOut();
+
+    var airbnb_link = $("." + calendar_match).find("li.house a").attr("href");
+    var phone_link = $("." + calendar_match).find("li.phone a").attr("href");
+    var map_link = $("." + calendar_match).find("li.location a").attr("href");
+
+    $(".itinerary_item.airbnb_links li.house_fill a").attr('href', airbnb_link)
+    $(".itinerary_item.airbnb_links li.map_fill a").attr('href', map_link)
+    $(".itinerary_item.airbnb_links li.phone_fill a").attr('href', phone_link)
+
+   }
+
 
   //$(".reveal").css("height","200px");
 
@@ -22,12 +56,13 @@ $('.active').on("click", function(){
 // Hamburger Functions
 
 //localStorage.clear();
-$('.reset').on('click', function(){
+$('.trash').on('click', function(){
 
-  let text = "You're About To Wipe All Data\nProceed?";
+  let text = "Do you want to wipe Expense Data?";
 
   if (confirm(text)) {
     localStorage.clear();
+    location.reload();
   } else {
     
   }
@@ -109,6 +144,7 @@ setTimeout(function(){
     
     $('#expense').css("left","0");
     $('.button_2').show();
+    $('.trash').fadeIn('slow');
 
 }, 250);
 
@@ -117,6 +153,7 @@ setTimeout(function(){
 $('.button_2').click(function(){
 
 $('.button_2').hide();
+$('.trash').hide();
 $('#expense').css("left","100%");
 
 

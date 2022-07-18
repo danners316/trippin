@@ -1,6 +1,9 @@
 /* Style CSS*/
 
 /* fontface */
+html{
+  overflow: hidden;
+}
 
 body {
     background-image: url(images/backgroundNYC.jpg);
@@ -165,7 +168,7 @@ ul.three li.icon {
 
 	max-width: 1280px;
 	display: block;
-	margin:160px auto 0 auto;
+	margin:120px auto 0 auto;
 
 }
 
@@ -173,6 +176,10 @@ ul.three li.icon {
 	width:96%;
 	padding: 0 2%;
 	margin:50px 0 50px 0;
+}
+
+.airbnb_links_hidden {
+    display: none;
 }
 
 /* SECTION 2 */
@@ -290,8 +297,12 @@ nav .logo {
   color: #fff;
  }
 
- .fa-car, .fa-city, .fa-house-chimney {
+ .fa-car, .fa-city, .fa-house-chimney{
     color: #000;
+}
+
+.fa-trash {
+    color: #B31942;
 }
 
 .fa-arrow-left, .fa-arrow-right{
@@ -306,6 +317,11 @@ color:#3cba54;
 
 .fa-mobile{
 color:#db3236
+}
+
+li.gaff_of_whom{
+  color: #212121;
+  font-size: 18px;
 }
 
 
@@ -452,7 +468,7 @@ p.result {
     top: 0;
     background-color: #fff;
     margin: 0;
-    padding-top: 50px;
+    padding-top: 34px;
     height: 100%;
     left: 100%;
     transition: left, 0.5s;
@@ -463,11 +479,21 @@ p.result {
 
 #expense h1 {
     margin-bottom: 20px;
-    font-family: 'Wiltona Brush';
-    font-size: 62px;
+    font-size: 22px;
     margin-bottom: 50px;
     display: block;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Coolvetica';
+}
+
+.trash {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    display: none;
+    cursor: no-drop;
 }
 
 .title-word {
@@ -679,7 +705,11 @@ table.itinerary {
     margin: 0 auto;
     opacity: 0.9;
     margin-top: 2px;
-    display: flex;
+    display: flex;    
+    
+    position: relative;
+    top: 400px;
+    transition: bottom, 0.5s;
 }
 
 .itinerary_item p {
