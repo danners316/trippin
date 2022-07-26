@@ -3,6 +3,17 @@
 $('.active').on("click", function(){
 
 
+  var what_city = $(this).find('span.city_stay').text();
+  var what_city_now = $('.where_at').text();
+
+  if (what_city == what_city_now){
+    
+  }
+
+  else{
+    $('.where_at').fadeOut();
+  }
+
 
   $('.calendar td.active').removeClass("current_day");
   $(this).addClass('current_day');  
@@ -27,7 +38,7 @@ $('.active').on("click", function(){
     $('.itinerary_item.airbnb_links').css("top","0");
     $('.itinerary_item.airbnb_links ul').fadeIn();
     $('.itinerary_item.staying_with').css("top","400px");
-   $('.itinerary_item.staying_with ul').fadeOut();
+    $('.itinerary_item.staying_with ul').fadeOut();
 
     var airbnb_link = $("." + calendar_match).find("li.house a").attr("href");
     var phone_link = $("." + calendar_match).find("li.phone a").attr("href");
@@ -44,6 +55,14 @@ $('.active').on("click", function(){
 
   $(".spinner").removeClass("off");
   $("ul.spinner li.what_day").text(day);
+
+    setTimeout(function(){ 
+
+    $('.where_at').fadeIn();
+    $('.where_at').text(what_city);
+
+  }, 500);   
+
 
   setTimeout(function(){ 
 
