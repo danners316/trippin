@@ -26,9 +26,9 @@ $('.active').on("click", function(){
   if($("." + calendar_match).find("li.house a").attr("href") == "www"){ 
 
    $('.itinerary_item.airbnb_links').css("top","400px");
-   $('.itinerary_item.airbnb_links ul').fadeOut();
+   $('.itinerary_item.airbnb_links ul').hide();
    $('.itinerary_item.staying_with').css("top","-70px");
-   $('.itinerary_item.staying_with ul').fadeIn();
+   $('.itinerary_item.staying_with ul').show();
 
 
    }
@@ -36,9 +36,9 @@ $('.active').on("click", function(){
    else{
 
     $('.itinerary_item.airbnb_links').css("top","0");
-    $('.itinerary_item.airbnb_links ul').fadeIn();
+    $('.itinerary_item.airbnb_links ul').show();
     $('.itinerary_item.staying_with').css("top","400px");
-    $('.itinerary_item.staying_with ul').fadeOut();
+    $('.itinerary_item.staying_with ul').hide();
 
     var airbnb_link = $("." + calendar_match).find("li.house a").attr("href");
     var phone_link = $("." + calendar_match).find("li.phone a").attr("href");
