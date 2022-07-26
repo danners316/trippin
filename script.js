@@ -21,7 +21,7 @@ $('.active').on("click", function(){
 
   
 
-  var calendar_match = $(this).text();
+  var calendar_match = $(this).find('.day_today').text();
 
   if($("." + calendar_match).find("li.house a").attr("href") == "www"){ 
 
